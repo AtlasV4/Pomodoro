@@ -32,15 +32,13 @@
         </div>
         <div id="divBouton">
             <form>
-                <div class="gestion">
-                    <input type="button" id="timer" value="Lancer Timer" onclick="getValue()"></button>
-                </div>
-                <div class="gestion">
-                    <input type="number" id="tempsTravail" min="0" placeholder="Temps de travail" value="25"></input>
-                </div>
-                <div class="gestion">
-                    <input type="number" id="tempsPause" min="0" placeholder="Temps de pause" value="5"></input>
-                </div>
+                <input type="button" id="timer" value="Lancer Timer" onclick="getValue()"></button>
+                    <label for="travail"> Temps de travail : </label>
+                    <input type="number" id="tempsTravail" placeholder="Temps de travail" value="25"></input>
+                    <label for="pause"> Temps de la pause : </label>
+                    <input type="number" id="tempsPause" placeholder="Temps de pause" value="5"></input>
+                    <label for="longuePause"> Temps de la longue pause : </label>
+                    <input type="number" id="tempsLonguePause" placeholder="Temps de la longue pause" value="20"></input>
             </form>
         </div>
     </main>
@@ -50,7 +48,7 @@
             procrastination en encourageant un travail intense et sans distractions pendant les pomodoros, suivis de périodes de récupération. 
             Cette méthode, développée par Francesco Cirillo, est largement utilisée pour optimiser l'efficacité au travail.
         </p>
-        <p>© 2023 - Pomodoro - Meziere Leny</p>
+        <p id="copyright">© 2023 - Pomodoro - Meziere Leny</p>
     </footer>
     <script src="js/script.js"></script>
 </body>

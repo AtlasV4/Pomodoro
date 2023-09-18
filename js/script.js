@@ -1,6 +1,7 @@
 let boutonTimer = document.getElementById("timer")
-let tempsTravail
-let tempsPause
+let tempsTravailInput = document.getElementById("tempsTravail")
+let tempsPauseInput = document.getElementById("tempsPause")
+let tempsLonguePauseInput = document.getElementById("tempsLonguePause")
 let temps
 let compteur = 0
 let nbPomodori = document.getElementById("nbPomodori")
@@ -15,8 +16,9 @@ let boutons = document.getElementById("boutons")
 let minutes
 let secondes
 
+const input = [tempsPauseInput,tempsLonguePauseInput,tempsTravailInput]
+
 getValue()
-console.log(tempsPause, tempsTravail)
 
 boutonTimer.addEventListener("click", () => {
     if(boutonTimer.value == "Lancer Timer") {
@@ -38,7 +40,7 @@ function timer() {
     }
     else {
         compteur++
-        if (compteur % 2 === 0 && compteur % 8 !== 0) {
+        if (compteur % 2 === 0 && compteur % 9 !== 0) {
             temps = tempsTravail * 60;
             divTimer.style.backgroundColor = "#EA3712";
             pause.style.color = "white";
@@ -46,30 +48,40 @@ function timer() {
             boutonTimer.style.backgroundColor = "#EA3712";
             boutons.style.backgroundColor = "#EA3712";
             nbPomodori.innerText = parseInt(nbPomodori.innerText) + 1
-        } else if (compteur % 8 === 0 && compteur % 2 === 0) {
-            nbPomodori.innerText = parseInt(nbPomodori.innerText) + 1
-            temps = 1200;
-            divTimer.style.backgroundColor = "green";
-            travail.style.color = "white";
-            pause.style.color = "yellow";
-            boutonTimer.style.backgroundColor = "green";
-            boutons.style.backgroundColor = "green";
+        } else if (compteur % 9 === 0) {
+            temps = tempsLonguePause * 60;
+            couleurPause()
+            //nbPomodori.innerText = parseInt(nbPomodori.innerText) + 1
         } else if (compteur % 2 !== 0) {
             temps = tempsPause * 60;
-            divTimer.style.backgroundColor = "green";
-            travail.style.color = "white";
-            pause.style.color = "yellow";
-            boutonTimer.style.backgroundColor = "green";
-            boutons.style.backgroundColor = "green";
+            couleurPause()
         }
     }
 }
 
 function getValue() {
-    tempsTravail = document.getElementById("tempsTravail").value
-    tempsPause = document.getElementById("tempsPause").value
+    tempsTravail = tempsTravailInput.value
+    tempsPause = tempsPauseInput.value
+    tempsLonguePause = tempsLonguePauseInput.value
     temps = tempsTravail * 60
     minutes = parseInt(temps/60,10) < 10 ? "0"+parseInt(temps/60,10) : parseInt(temps/60,10)
     secondes = parseInt(temps % 60,10) < 10 ? "0"+parseInt(temps % 60,10) : parseInt(temps % 60,10)
     duree.innerText = minutes + ":" + secondes
 }
+
+function couleurPause() {
+    divTimer.style.backgroundColor = "green";
+            travail.style.color = "white";
+            pause.style.color = "yellow";
+            boutonTimer.style.backgroundColor = "green";
+            boutons.style.backgroundColor = "green";
+}
+
+
+for(let resultat of input) {
+    resultat.addEventListener('input', function(){
+        let valeur = this.value.match(/^\d+$/);
+        if (valeur === null) {
+            this.value = "";
+        }
+})}
