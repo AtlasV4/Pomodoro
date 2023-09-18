@@ -1,0 +1,127 @@
+#duree {
+    font-size : 50px;
+    font-weight : bold;
+    text-align : center;
+    color : white;
+    margin-top: 2.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#divTimer {
+    background-color : #EA3712;
+    border : solid white 3px;
+    border-radius: 50%;
+    width: 20em;
+    height: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px 5px;
+}
+
+#divBouton {
+    margin-top : 30px;
+}
+
+#timer {
+    background-color: #EA3712;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: grab;
+    border-radius: 15px;
+    box-shadow: 0px 4px #4D5154;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    z-index: 3;
+}
+
+#timer:active {
+    background-color: #555;
+}
+
+img {
+    width: 15em;
+    height: auto;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#divLogo {
+    background-color: #EA3712;
+    border-bottom: black solid 2px;
+    justify-content: left;
+}
+
+h1 {
+    text-align: center;
+    font-size: 200%;
+    color: white;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#boutons {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #EA3712;
+    color: white;
+    border: none;
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+#pause {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: solid 2px black;
+}
+
+footer {
+    background-color:#EA3712 ;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    justify-content: center;
+    margin-top: 100px;
+    padding-top: 5px;
+    font-size: 14px;
+    border-top: solid 2px black;
+}
+
+.gestion {
+    margin-top: 20px;
+}
+
+#tempsTravail, #tempsPause {
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#divPomodori {
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+#nbPomodori {
+    margin-left: 10px;
+}

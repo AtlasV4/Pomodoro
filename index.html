@@ -6,14 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header></header>
+    <header>
+        <div id="divLogo">
+            <img src="img/pomodoro.png" alt="logo">
+            <h1>Pomodoro</h1>
+        </div>
+    </header>
     <main>
-        <div id="divTimer"></div>
-        <button id="timer">Lancer Timer</button>
+        <div id="boutons">
+            <p id="travail">Travail</p>
+            <p id="pause">Pause</p><br>
+        </div>
+        <div id="divPomodori">
+            <p>Nombre de pomodori :</p>
+            <p id="nbPomodori">0</p>
+        </div>
+        <div id="divTimer">
+            <p id="duree">25:00</p>
+        </div>
+        <div id="divBouton">
+            <form>
+                <div class="gestion">
+                    <input type="button" id="timer" value="Lancer Timer" onclick="getValue()"></button>
+                </div>
+                <div class="gestion">
+                    <input type="number" id="tempsTravail" min="0" placeholder="Temps de travail" value="25"></input>
+                </div>
+                <div class="gestion">
+                    <input type="number" id="tempsPause" min="0" placeholder="Temps de pause" value="5"></input>
+                </div>
+            </form>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <p> La méthode Pomodoro est une technique de gestion du temps qui consiste à diviser le travail en segments courts de 25 minutes 
+            (appelés "pomodoros") suivis de courtes pauses. Elle vise à améliorer la concentration, la productivité et à lutter contre la 
+            procrastination en encourageant un travail intense et sans distractions pendant les pomodoros, suivis de périodes de récupération. 
+            Cette méthode, développée par Francesco Cirillo, est largement utilisée pour optimiser l'efficacité au travail.
+        </p>
+        <p>© 2023 - Pomodoro - Meziere Leny</p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
