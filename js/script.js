@@ -3,6 +3,9 @@ let tempsTravailInput = document.getElementById("tempsTravail")
 let tempsPauseInput = document.getElementById("tempsPause")
 let tempsLonguePauseInput = document.getElementById("tempsLonguePause")
 let temps
+let tempsLonguePause
+let tempsPause
+let tempsTravail
 let compteur = 0
 let nbPomodori = document.getElementById("nbPomodori")
 let divTimer = document.getElementById("divTimer")
@@ -17,8 +20,6 @@ let minutes
 let secondes
 
 const input = [tempsPauseInput,tempsLonguePauseInput,tempsTravailInput]
-
-getValue()
 
 boutonTimer.addEventListener("click", () => {
     if(boutonTimer.value == "Lancer Timer") {
@@ -51,7 +52,6 @@ function timer() {
         } else if (compteur % 9 === 0) {
             temps = tempsLonguePause * 60;
             couleurPause()
-            //nbPomodori.innerText = parseInt(nbPomodori.innerText) + 1
         } else if (compteur % 2 !== 0) {
             temps = tempsPause * 60;
             couleurPause()
