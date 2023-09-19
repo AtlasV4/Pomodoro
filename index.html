@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro</title>
+    <link rel="icon" href="img/pomodoro.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,13 +33,13 @@
         </div>
         <div id="divBouton">
             <form>
-                    <input type="button" id="timer" value="Lancer Timer" onclick="getValue()">
+                    <input type="button" id="timer" value="Lancer Timer" onclick="recupValeurs()">
                     <label for="tempsTravail"> Temps de travail : </label>
-                    <input type="number" id="tempsTravail" placeholder="Temps de travail" value="25">
+                    <input type="number" id="tempsTravail" placeholder="Temps de travail">
                     <label for="tempsPause"> Temps de la pause : </label>
-                    <input type="number" id="tempsPause" placeholder="Temps de pause" value="5">
+                    <input type="number" id="tempsPause" placeholder="Temps de pause" >
                     <label for="tempsLonguePause"> Temps de la longue pause : </label>
-                    <input type="number" id="tempsLonguePause" placeholder="Temps de la longue pause" value="20">
+                    <input type="number" id="tempsLonguePause" placeholder="Temps de la longue pause">
             </form>
         </div>
     </main>
@@ -48,7 +49,7 @@
             procrastination en encourageant un travail intense et sans distractions pendant les pomodoros, suivis de périodes de récupération. 
             Cette méthode, développée par Francesco Cirillo, est largement utilisée pour optimiser l'efficacité au travail.
         </p>
-        <p id="copyright">© 2023 - Pomodoro - Meziere Leny</p>
+        <p id="copyright">© 2023 - Pomodoro - Meziere Leny <a href="https://github.com/AtlasV4">GitHub</a></p>
     </footer>
     <script src="js/script.js"></script>
 </body>
