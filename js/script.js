@@ -109,7 +109,7 @@ for (let resultat of input) {
     resultat.addEventListener("input", (e) => {
         let valeur = e.target.value.match(/^\d+$/);
         if (valeur === null) {
-            e.target.value = "";
+            e.target.value = 0;
         }
     });
 }
