@@ -21,18 +21,18 @@ let secondes;
 
 const input = [tempsPauseInput, tempsLonguePauseInput, tempsTravailInput];
 
-tempsTravailInput.addEventListener("input", () => {
-    tempsTravail = parseInt(this.value, 10);
+tempsTravailInput.addEventListener("input", (e) => {
+    tempsTravail = parseInt(e.target.value, 10);
     localStorage.setItem("tempsTravail", tempsTravail);
 });
 
-tempsPauseInput.addEventListener("input", () => {
-    tempsPause = parseInt(this.value, 10);
+tempsPauseInput.addEventListener("input", (e) => {
+    tempsPause = parseInt(e.target.value, 10);
     localStorage.setItem("tempsPause", tempsPause);
 });
 
-tempsLonguePauseInput.addEventListener("input", () => {
-    tempsLonguePause = parseInt(this.value, 10);
+tempsLonguePauseInput.addEventListener("input", (e) => {
+    tempsLonguePause = parseInt(e.target.value, 10);
     localStorage.setItem("tempsLonguePause", tempsLonguePause);
 });
 
@@ -77,15 +77,17 @@ document.addEventListener("DOMContentLoaded", () => {
     tempsPause = parseInt(localStorage.getItem("tempsPause") || 5, 10);
     tempsLonguePause = parseInt(localStorage.getItem("tempsLonguePause") || 20, 10);
 
+    temps = tempsTravail * 60;
+
     tempsTravailInput.value = tempsTravail;
     tempsPauseInput.value = tempsPause;
     tempsLonguePauseInput.value = tempsLonguePause;
 
-    temps = tempsTravail * 60;
     minutes = parseInt(temps / 60, 10) < 10 ? "0" + parseInt(temps / 60, 10) : parseInt(temps / 60, 10);
     secondes = parseInt(temps % 60, 10) < 10 ? "0" + parseInt(temps % 60, 10) : parseInt(temps % 60, 10);
     duree.innerText = minutes + ":" + secondes;
 });
+
 
 function couleurPause() {
     divTimer.style.backgroundColor = "green";
@@ -96,10 +98,10 @@ function couleurPause() {
 }
 
 for (let resultat of input) {
-    resultat.addEventListener("input", () => {
-        let valeur = this.value.match(/^\d+$/);
+    resultat.addEventListener("input", (e) => {
+        let valeur = e.target.value.match(/^\d+$/);
         if (valeur === null) {
-            this.value = "";
+            e.target.value = "";
         }
     });
 }
@@ -113,4 +115,3 @@ function recupValeurs() {
     secondes = parseInt(temps % 60, 10) < 10 ? "0" + parseInt(temps % 60, 10) : parseInt(temps % 60, 10);
     duree.innerText = minutes + ":" + secondes;
 }
-
